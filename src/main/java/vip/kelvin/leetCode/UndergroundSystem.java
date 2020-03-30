@@ -8,6 +8,7 @@ class UndergroundSystem {
     Map<Integer, Integer> time = new HashMap();
     Map<String, Long> sum = new HashMap();
     Map<String, Integer> cnt = new HashMap();
+
     public UndergroundSystem() {
 
     }
@@ -16,7 +17,8 @@ class UndergroundSystem {
         enter.put(id, stationName);
         time.put(id, t);
     }
-    private String concate(String a, String b){
+
+    private String concate(String a, String b) {
         return a + ".-." + b;
     }
 
@@ -30,7 +32,7 @@ class UndergroundSystem {
 
     public double getAverageTime(String startStation, String endStation) {
         String way = concate(startStation, endStation);
-        return (double)sum.get(way) / cnt.get(way);
+        return (double) sum.get(way) / cnt.get(way);
     }
 }
 
